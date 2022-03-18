@@ -49,7 +49,7 @@ public class ItemSetCustomModelData extends Element {
     public void run(ElementInfo info, ScriptInstance instance) {
 
         ItemStack item = (ItemStack) getArguments(info)[0].getValue(instance);
-        int id = (int) getArguments(info)[1].getValue(instance);
+        int id = (int) (long) getArguments(info)[1].getValue(instance);
 
         Objects.requireNonNull(item.getItemMeta()).setCustomModelData(id);
 
