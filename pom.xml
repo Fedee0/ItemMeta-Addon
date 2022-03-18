@@ -54,16 +54,20 @@
 
     <repositories>
         <repository>
-            <id>spigotmc-repo</id>
+            <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
         <repository>
-            <id>placeholderapi</id>
+            <id>PlaceholderAPI</id>
             <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
         </repository>
         <repository>
             <id>sonatype</id>
             <url>https://oss.sonatype.org/content/groups/public/</url>
+        </repository>
+        <repository>
+            <id>techscode</id>
+            <url>https://repo.techscode.com/repository/maven-releases/</url>
         </repository>
     </repositories>
 
@@ -71,12 +75,12 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.12.2-R0.1-SNAPSHOT</version>
+            <version>1.18.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>me.fedee.ultracustomizer</groupId>
-            <artifactId>UltraCustomizer</artifactId>
+            <groupId>me.TechsCode</groupId>
+            <artifactId>UltraCustomizerAPI</artifactId>
             <scope>system</scope>
             <version>1.0.0</version>
             <systemPath>C:/Users/Federico/Desktop/UltraCustomizer.jar</systemPath>
