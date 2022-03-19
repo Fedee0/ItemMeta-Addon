@@ -7,6 +7,8 @@ import me.TechsCode.UltraCustomizer.scriptSystem.objects.datatypes.DataType;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.Objects;
+
 public class ItemRemoveEnchantment extends Element {
     public ItemRemoveEnchantment(UltraCustomizer plugin) {
         super(plugin);
@@ -53,7 +55,7 @@ public class ItemRemoveEnchantment extends Element {
 
 
         Enchantment EnchantmentObj = Enchantment.getByName(EnchantmentName);
-        Item.removeEnchantment(EnchantmentObj);
+        Item.removeEnchantment(Objects.requireNonNull(EnchantmentObj));
 
 
         getConnectors(info)[0].run(instance);

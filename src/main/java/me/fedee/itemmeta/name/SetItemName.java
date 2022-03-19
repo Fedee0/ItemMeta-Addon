@@ -9,6 +9,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.Objects;
+
 public class SetItemName extends Element {
     public SetItemName(UltraCustomizer plugin) {
         super(plugin);
@@ -56,7 +58,7 @@ public class SetItemName extends Element {
         name = PlaceholderAPI.setPlaceholders(player, name);
 
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName(name);
+        Objects.requireNonNull(meta).setDisplayName(name);
         item.setItemMeta(meta);
 
         getConnectors(info)[0].run(instance);

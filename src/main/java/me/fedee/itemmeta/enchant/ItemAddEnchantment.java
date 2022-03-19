@@ -7,6 +7,8 @@ import me.TechsCode.UltraCustomizer.scriptSystem.objects.datatypes.DataType;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.Objects;
+
 public class ItemAddEnchantment extends Element {
     public ItemAddEnchantment(UltraCustomizer plugin) {
         super(plugin);
@@ -55,7 +57,7 @@ public class ItemAddEnchantment extends Element {
 
 
         Enchantment EnchantmentObj = Enchantment.getByName(EnchantmentName);
-        Item.addUnsafeEnchantment(EnchantmentObj, Level);
+        Item.addUnsafeEnchantment(Objects.requireNonNull(EnchantmentObj), Level);
 
 
         getConnectors(info)[0].run(instance);
