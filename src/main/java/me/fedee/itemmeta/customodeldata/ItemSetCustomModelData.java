@@ -26,7 +26,7 @@ public class ItemSetCustomModelData extends Element {
     }
 
     public XMaterial getMaterial() {
-        return XMaterial.TOTEM_OF_UNDYING;
+        return XMaterial.GLOWSTONE_DUST;
     }
 
     public String[] getDescription() {

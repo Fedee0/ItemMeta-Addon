@@ -26,7 +26,7 @@ public class ItemGetCustomModelData extends Element {
     }
 
     public XMaterial getMaterial() {
-        return XMaterial.ENCHANTED_GOLDEN_APPLE;
+        return XMaterial.BLAZE_POWDER;
     }
 
     public String[] getDescription() {

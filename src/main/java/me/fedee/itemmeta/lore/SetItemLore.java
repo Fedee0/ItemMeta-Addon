@@ -11,6 +11,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class SetItemLore extends Element {
     public SetItemLore(UltraCustomizer plugin) {
@@ -58,10 +59,12 @@ public class SetItemLore extends Element {
         String lore = (String) getArguments(info)[2].getValue(instance);
         lore = PlaceholderAPI.setPlaceholders(player, lore);
 
-        List<String> LoreList = new ArrayList<String>();
+        List<String> LoreList = new ArrayList<>();
         ItemMeta meta = item.getItemMeta();
+        LoreList.add(Objects.requireNonNull(Objects.requireNonNull(meta).getLore()).toString().replaceAll("[\\\\[\\\\](\\\\)]", ""));
         LoreList.add(lore);
-        meta.setLore(LoreList);
+        System.out.println(LoreList);
+        Objects.requireNonNull(meta).setLore(LoreList);
         item.setItemMeta(meta);
 
         getConnectors(info)[0].run(instance);
